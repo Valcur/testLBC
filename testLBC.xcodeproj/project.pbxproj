@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB9C22522A18C61300656BC7 /* ArticleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C22512A18C61300656BC7 /* ArticleTest.swift */; };
 		DBC525CF2A14D78A0007A75F /* testLBCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC525CE2A14D78A0007A75F /* testLBCApp.swift */; };
 		DBC525D12A14D78A0007A75F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC525D02A14D78A0007A75F /* ContentView.swift */; };
 		DBC525D32A14D78B0007A75F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC525D22A14D78B0007A75F /* Assets.xcassets */; };
 		DBC525D62A14D78B0007A75F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC525D52A14D78B0007A75F /* Preview Assets.xcassets */; };
 		DBC525E02A14D78C0007A75F /* testLBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC525DF2A14D78C0007A75F /* testLBCTests.swift */; };
-		DBC525EA2A14D78C0007A75F /* testLBCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC525E92A14D78C0007A75F /* testLBCUITests.swift */; };
-		DBC525EC2A14D78C0007A75F /* testLBCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC525EB2A14D78C0007A75F /* testLBCUITestsLaunchTests.swift */; };
+		DBC525FA2A161EB30007A75F /* TestArticles.json in Resources */ = {isa = PBXBuildFile; fileRef = DBC525F92A161EB30007A75F /* TestArticles.json */; };
+		DBC525FC2A161EE30007A75F /* TestCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = DBC525FB2A161EE30007A75F /* TestCategories.json */; };
+		DBC525FF2A16201B0007A75F /* ArticleCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC525FE2A16201B0007A75F /* ArticleCategory.swift */; };
+		DBC526012A16205A0007A75F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC526002A16205A0007A75F /* Article.swift */; };
+		DBC526032A1680C30007A75F /* CategoriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC526022A1680C30007A75F /* CategoriesTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,16 +28,10 @@
 			remoteGlobalIDString = DBC525CA2A14D78A0007A75F;
 			remoteInfo = testLBC;
 		};
-		DBC525E62A14D78C0007A75F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DBC525C32A14D78A0007A75F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DBC525CA2A14D78A0007A75F;
-			remoteInfo = testLBC;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB9C22512A18C61300656BC7 /* ArticleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTest.swift; sourceTree = "<group>"; };
 		DBC525CB2A14D78A0007A75F /* testLBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testLBC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC525CE2A14D78A0007A75F /* testLBCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testLBCApp.swift; sourceTree = "<group>"; };
 		DBC525D02A14D78A0007A75F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,9 +39,11 @@
 		DBC525D52A14D78B0007A75F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBC525DB2A14D78C0007A75F /* testLBCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testLBCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC525DF2A14D78C0007A75F /* testLBCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testLBCTests.swift; sourceTree = "<group>"; };
-		DBC525E52A14D78C0007A75F /* testLBCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testLBCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBC525E92A14D78C0007A75F /* testLBCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testLBCUITests.swift; sourceTree = "<group>"; };
-		DBC525EB2A14D78C0007A75F /* testLBCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testLBCUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DBC525F92A161EB30007A75F /* TestArticles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestArticles.json; sourceTree = "<group>"; };
+		DBC525FB2A161EE30007A75F /* TestCategories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestCategories.json; sourceTree = "<group>"; };
+		DBC525FE2A16201B0007A75F /* ArticleCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCategory.swift; sourceTree = "<group>"; };
+		DBC526002A16205A0007A75F /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		DBC526022A1680C30007A75F /* CategoriesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +61,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBC525E22A14D78C0007A75F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +69,6 @@
 			children = (
 				DBC525CD2A14D78A0007A75F /* testLBC */,
 				DBC525DE2A14D78C0007A75F /* testLBCTests */,
-				DBC525E82A14D78C0007A75F /* testLBCUITests */,
 				DBC525CC2A14D78A0007A75F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +78,6 @@
 			children = (
 				DBC525CB2A14D78A0007A75F /* testLBC.app */,
 				DBC525DB2A14D78C0007A75F /* testLBCTests.xctest */,
-				DBC525E52A14D78C0007A75F /* testLBCUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +85,7 @@
 		DBC525CD2A14D78A0007A75F /* testLBC */ = {
 			isa = PBXGroup;
 			children = (
+				DBC525FD2A1620090007A75F /* Models */,
 				DBC525CE2A14D78A0007A75F /* testLBCApp.swift */,
 				DBC525D02A14D78A0007A75F /* ContentView.swift */,
 				DBC525D22A14D78B0007A75F /* Assets.xcassets */,
@@ -113,18 +105,30 @@
 		DBC525DE2A14D78C0007A75F /* testLBCTests */ = {
 			isa = PBXGroup;
 			children = (
+				DBC525F82A161D7F0007A75F /* Ressources */,
 				DBC525DF2A14D78C0007A75F /* testLBCTests.swift */,
+				DBC526022A1680C30007A75F /* CategoriesTest.swift */,
+				DB9C22512A18C61300656BC7 /* ArticleTest.swift */,
 			);
 			path = testLBCTests;
 			sourceTree = "<group>";
 		};
-		DBC525E82A14D78C0007A75F /* testLBCUITests */ = {
+		DBC525F82A161D7F0007A75F /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				DBC525E92A14D78C0007A75F /* testLBCUITests.swift */,
-				DBC525EB2A14D78C0007A75F /* testLBCUITestsLaunchTests.swift */,
+				DBC525F92A161EB30007A75F /* TestArticles.json */,
+				DBC525FB2A161EE30007A75F /* TestCategories.json */,
 			);
-			path = testLBCUITests;
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		DBC525FD2A1620090007A75F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBC526002A16205A0007A75F /* Article.swift */,
+				DBC525FE2A16201B0007A75F /* ArticleCategory.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +169,6 @@
 			productReference = DBC525DB2A14D78C0007A75F /* testLBCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DBC525E42A14D78C0007A75F /* testLBCUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DBC525F52A14D78C0007A75F /* Build configuration list for PBXNativeTarget "testLBCUITests" */;
-			buildPhases = (
-				DBC525E12A14D78C0007A75F /* Sources */,
-				DBC525E22A14D78C0007A75F /* Frameworks */,
-				DBC525E32A14D78C0007A75F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DBC525E72A14D78C0007A75F /* PBXTargetDependency */,
-			);
-			name = testLBCUITests;
-			productName = testLBCUITests;
-			productReference = DBC525E52A14D78C0007A75F /* testLBCUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +183,6 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					DBC525DA2A14D78C0007A75F = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = DBC525CA2A14D78A0007A75F;
-					};
-					DBC525E42A14D78C0007A75F = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = DBC525CA2A14D78A0007A75F;
 					};
@@ -221,7 +203,6 @@
 			targets = (
 				DBC525CA2A14D78A0007A75F /* testLBC */,
 				DBC525DA2A14D78C0007A75F /* testLBCTests */,
-				DBC525E42A14D78C0007A75F /* testLBCUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -240,13 +221,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DBC525E32A14D78C0007A75F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				DBC525FA2A161EB30007A75F /* TestArticles.json in Resources */,
+				DBC525FC2A161EE30007A75F /* TestCategories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +233,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC526012A16205A0007A75F /* Article.swift in Sources */,
 				DBC525D12A14D78A0007A75F /* ContentView.swift in Sources */,
 				DBC525CF2A14D78A0007A75F /* testLBCApp.swift in Sources */,
+				DBC525FF2A16201B0007A75F /* ArticleCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,15 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC525E02A14D78C0007A75F /* testLBCTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DBC525E12A14D78C0007A75F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DBC525EC2A14D78C0007A75F /* testLBCUITestsLaunchTests.swift in Sources */,
-				DBC525EA2A14D78C0007A75F /* testLBCUITests.swift in Sources */,
+				DB9C22522A18C61300656BC7 /* ArticleTest.swift in Sources */,
+				DBC526032A1680C30007A75F /* CategoriesTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,11 +257,6 @@
 			isa = PBXTargetDependency;
 			target = DBC525CA2A14D78A0007A75F /* testLBC */;
 			targetProxy = DBC525DC2A14D78C0007A75F /* PBXContainerItemProxy */;
-		};
-		DBC525E72A14D78C0007A75F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DBC525CA2A14D78A0007A75F /* testLBC */;
-			targetProxy = DBC525E62A14D78C0007A75F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -507,42 +473,6 @@
 			};
 			name = Release;
 		};
-		DBC525F62A14D78C0007A75F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LXUS44RH3Q;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Loic.testLBCUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = testLBC;
-			};
-			name = Debug;
-		};
-		DBC525F72A14D78C0007A75F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LXUS44RH3Q;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Loic.testLBCUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = testLBC;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,15 +499,6 @@
 			buildConfigurations = (
 				DBC525F32A14D78C0007A75F /* Debug */,
 				DBC525F42A14D78C0007A75F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DBC525F52A14D78C0007A75F /* Build configuration list for PBXNativeTarget "testLBCUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DBC525F62A14D78C0007A75F /* Debug */,
-				DBC525F72A14D78C0007A75F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
