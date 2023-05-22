@@ -11,7 +11,8 @@ import SwiftUI
 struct testLBCApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ArticleView()
+                .environmentObject(ArticleViewModel())
         }
     }
 }

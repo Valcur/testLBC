@@ -48,19 +48,9 @@ struct Article: Codable {
         
         images_url = try container.decode(ArticleImage.self, forKey: .images_url)
     }
-    
-    init(id: Int64, title: String, category_id: Int64, creation_date: Date, description: String, images_url: ArticleImage, is_urgent: Bool, price: Float, siret: String?) {
-        self.id = id
-        self.title = title
-        self.category_id = category_id
-        self.creation_date = creation_date
-        self.description = description
-        self.images_url = images_url
-        self.is_urgent = is_urgent
-        self.price = price
-        self.siret = siret
-    }
-    
+}
+
+extension Article {
     struct ArticleImage: Codable {
         let small: String?
         let thumb: String?

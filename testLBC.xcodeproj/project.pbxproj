@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		DB9C22522A18C61300656BC7 /* ArticleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C22512A18C61300656BC7 /* ArticleTest.swift */; };
-		DBC525CF2A14D78A0007A75F /* testLBCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC525CE2A14D78A0007A75F /* testLBCApp.swift */; };
-		DBC525D12A14D78A0007A75F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC525D02A14D78A0007A75F /* ContentView.swift */; };
+		DB9C22622A1A188300656BC7 /* testLBCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C22612A1A188300656BC7 /* testLBCApp.swift */; };
+		DB9C22652A1A196100656BC7 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C22642A1A196100656BC7 /* ArticleViewModel.swift */; };
+		DB9C22672A1A1A3700656BC7 /* ArticleViewModel+DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C22662A1A1A3700656BC7 /* ArticleViewModel+DownloadManager.swift */; };
+		DB9C226C2A1A7D4000656BC7 /* ArticleDetailledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C226B2A1A7D4000656BC7 /* ArticleDetailledView.swift */; };
+		DB9C226E2A1B611400656BC7 /* CategoriesManages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C226D2A1B611400656BC7 /* CategoriesManages.swift */; };
+		DBC525D12A14D78A0007A75F /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC525D02A14D78A0007A75F /* ArticleView.swift */; };
 		DBC525D32A14D78B0007A75F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC525D22A14D78B0007A75F /* Assets.xcassets */; };
 		DBC525D62A14D78B0007A75F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC525D52A14D78B0007A75F /* Preview Assets.xcassets */; };
 		DBC525E02A14D78C0007A75F /* testLBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC525DF2A14D78C0007A75F /* testLBCTests.swift */; };
@@ -32,9 +36,13 @@
 
 /* Begin PBXFileReference section */
 		DB9C22512A18C61300656BC7 /* ArticleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTest.swift; sourceTree = "<group>"; };
+		DB9C22612A1A188300656BC7 /* testLBCApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testLBCApp.swift; sourceTree = "<group>"; };
+		DB9C22642A1A196100656BC7 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		DB9C22662A1A1A3700656BC7 /* ArticleViewModel+DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleViewModel+DownloadManager.swift"; sourceTree = "<group>"; };
+		DB9C226B2A1A7D4000656BC7 /* ArticleDetailledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailledView.swift; sourceTree = "<group>"; };
+		DB9C226D2A1B611400656BC7 /* CategoriesManages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesManages.swift; sourceTree = "<group>"; };
 		DBC525CB2A14D78A0007A75F /* testLBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testLBC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBC525CE2A14D78A0007A75F /* testLBCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testLBCApp.swift; sourceTree = "<group>"; };
-		DBC525D02A14D78A0007A75F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DBC525D02A14D78A0007A75F /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		DBC525D22A14D78B0007A75F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBC525D52A14D78B0007A75F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBC525DB2A14D78C0007A75F /* testLBCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testLBCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +72,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB9C226A2A1A7D1C00656BC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBC525D02A14D78A0007A75F /* ArticleView.swift */,
+				DB9C226B2A1A7D4000656BC7 /* ArticleDetailledView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB9C226F2A1B613800656BC7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB9C22642A1A196100656BC7 /* ArticleViewModel.swift */,
+				DB9C22662A1A1A3700656BC7 /* ArticleViewModel+DownloadManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DBC525C22A14D78A0007A75F = {
 			isa = PBXGroup;
 			children = (
@@ -85,9 +111,10 @@
 		DBC525CD2A14D78A0007A75F /* testLBC */ = {
 			isa = PBXGroup;
 			children = (
+				DB9C22612A1A188300656BC7 /* testLBCApp.swift */,
+				DB9C226F2A1B613800656BC7 /* ViewModel */,
+				DB9C226A2A1A7D1C00656BC7 /* Views */,
 				DBC525FD2A1620090007A75F /* Models */,
-				DBC525CE2A14D78A0007A75F /* testLBCApp.swift */,
-				DBC525D02A14D78A0007A75F /* ContentView.swift */,
 				DBC525D22A14D78B0007A75F /* Assets.xcassets */,
 				DBC525D42A14D78B0007A75F /* Preview Content */,
 			);
@@ -127,6 +154,7 @@
 			children = (
 				DBC526002A16205A0007A75F /* Article.swift */,
 				DBC525FE2A16201B0007A75F /* ArticleCategory.swift */,
+				DB9C226D2A1B611400656BC7 /* CategoriesManages.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,10 +261,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9C226C2A1A7D4000656BC7 /* ArticleDetailledView.swift in Sources */,
 				DBC526012A16205A0007A75F /* Article.swift in Sources */,
-				DBC525D12A14D78A0007A75F /* ContentView.swift in Sources */,
-				DBC525CF2A14D78A0007A75F /* testLBCApp.swift in Sources */,
+				DBC525D12A14D78A0007A75F /* ArticleView.swift in Sources */,
+				DB9C22622A1A188300656BC7 /* testLBCApp.swift in Sources */,
+				DB9C226E2A1B611400656BC7 /* CategoriesManages.swift in Sources */,
+				DB9C22652A1A196100656BC7 /* ArticleViewModel.swift in Sources */,
 				DBC525FF2A16201B0007A75F /* ArticleCategory.swift in Sources */,
+				DB9C22672A1A1A3700656BC7 /* ArticleViewModel+DownloadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +423,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,6 +453,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
