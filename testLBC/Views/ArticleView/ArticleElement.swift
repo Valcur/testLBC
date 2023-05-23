@@ -9,65 +9,67 @@ import SwiftUI
 
 extension ArticleView {
     struct ArticleElement: View {
+        @Environment(\.colorScheme) var colorScheme
         let article: Article
         let categoriesManager: CategoriesManager
         @State private var image: UIImage? = nil
         @State private var showingDetails = false
         
         var body: some View {
-            ZStack(alignment: .topLeading) {
-                VStack(spacing: 15) {
-                    // Image
-                    if let image = image {
-                        GeometryReader { geo in
-                            ZStack {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .blur(radius: 20)
-                                    .frame(height: 250)
-                                
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: 250)
+            Button(action: {
+                showingDetails.toggle()
+            }, label: {
+                ZStack(alignment: .topLeading) {
+                    VStack(spacing: 15) {
+                        // Image
+                        if let image = image {
+                            GeometryReader { geo in
+                                ZStack {
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .blur(radius: 20)
+                                        .frame(height: 250)
                                     
-                            }.frame(width: geo.size.width, height: 250).cornerRadius(15)
-                        }.frame(height: 250)
-                    } else {
-                        Color.orange.cornerRadius(15).frame(height: 250)
-                    }
-                    
-                    // Info
-                    VStack(alignment: .leading, spacing: 5) {
-                        HStack {
-                            Text(String(format: "%.2f", article.price) + "€")
-                                .font(.headline)
-                                .fontWeight(.heavy)
-                            Spacer()
-                            Text(categoriesManager.categoryNameforId(article.category_id))
-                                .font(.headline)
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: 250)
+                                        
+                                }.frame(width: geo.size.width, height: 250).cornerRadius(15)
+                            }.frame(height: 250)
+                        } else {
+                            Color.orange.cornerRadius(15).frame(height: 250)
                         }
                         
-                        Text(article.title)
+                        // Info
+                        VStack(alignment: .leading, spacing: 5) {
+                            HStack {
+                                Text(String(format: "%.2f", article.price) + "€")
+                                    .font(.headline)
+                                    .fontWeight(.heavy)
+                                Spacer()
+                                Text(categoriesManager.categoryNameforId(article.category_id))
+                                    .font(.headline)
+                            }
+                            
+                            Text(article.title)
+                        }
+                    }
+                    if article.is_urgent {
+                        Text("Urgent")
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .background(Color.orange)
+                            .cornerRadius(10)
+                            .padding(10)
                     }
                 }
-                if article.is_urgent {
-                    Text("Urgent")
-                        .foregroundColor(.white)
-                        .padding(10)
-                        .background(Color.orange)
-                        .cornerRadius(10)
-                        .padding(10)
-                }
-            }
+            }).foregroundColor(colorScheme == .dark ? Color.white : Color.black)
             .onAppear() {
                 if image == nil {
                     loadArticleImage()
                 }
-            }
-            .onTapGesture {
-                showingDetails.toggle()
             }
             .sheet(isPresented: $showingDetails) {
                 ArticleDetailledView(article: article)

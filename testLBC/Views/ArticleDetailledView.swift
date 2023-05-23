@@ -22,7 +22,7 @@ struct ArticleDetailledView: View {
                     } else {
                         Color.orange.frame(width: geo.size.width, height: geo.size.height / 2.5)
                     }
-                    Color.white.frame(height: 50).cornerRadius(25).offset(y: 25)
+                    Color(UIColor.systemBackground).frame(height: 50).cornerRadius(25).offset(y: 25)
                 }.frame(width: geo.size.width, height: geo.size.height / 2.5)
                 
                 
