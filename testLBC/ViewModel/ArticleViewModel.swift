@@ -9,7 +9,7 @@ import Foundation
 
 class ArticleViewModel: ObservableObject {
     @Published var categoriesManager: CategoriesManager = CategoriesManager([])
-    @Published var articles: [Article] = [] 
+    @Published private var articles: [Article] = [] 
     @Published var filteredArticles: [Article] = []
     @Published var filterSelectedId: Int64 = 0
     

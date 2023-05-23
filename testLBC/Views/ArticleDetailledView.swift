@@ -12,53 +12,59 @@ struct ArticleDetailledView: View {
     let article: Article
     
     var body: some View {
-        VStack {
-            ZStack(alignment: .bottom) {
-                if let image = image {
-                    Image(uiImage: image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                } else {
-                    Color.orange
-                }
-                Color.white.frame(height: 50).cornerRadius(25).offset(y: 25)
-            }
-            
-            VStack(alignment: .leading) {
-                Text(article.title)
-                    .font(.title)
-                    .fontWeight(.bold)
+        GeometryReader { geo in
+            VStack {
+                ZStack(alignment: .bottom) {
+                    if let image = image {
+                        Image(uiImage: image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill).frame(width: geo.size.width, height: geo.size.height / 2.5).clipped()
+                    } else {
+                        Color.orange.frame(width: geo.size.width, height: geo.size.height / 2.5)
+                    }
+                    Color.white.frame(height: 50).cornerRadius(25).offset(y: 25)
+                }.frame(width: geo.size.width, height: geo.size.height / 2.5)
                 
-                Text(article.creation_date, style: .date)
-                    .fontWeight(.bold)
-                    .padding(.bottom, 20)
                 
-                ScrollView(.vertical) {
-                    VStack {
-                        Text(article.description)
-                        Spacer()
+                VStack(alignment: .leading) {
+                    VStack(alignment: .leading) {
+                        Text(article.title)
+                            .font(.title)
+                            .fontWeight(.bold)
+                        
+                        Text(article.creation_date, style: .date)
+                            .fontWeight(.bold)
+                            .padding(.bottom, 20)
+                    }.padding(.horizontal, 20)
+                    
+                    ScrollView(.vertical) {
+                        VStack {
+                            Text(article.description)
+                            Spacer()
+                        }.padding(.horizontal, 20)
                     }
                 }
-            }.padding(.horizontal, 20).offset(y: -10)
-
-            HStack {
-                Spacer()
-                Text(String(format: "%.2f", article.price) + "€")
-                    .fontWeight(.bold)
-                    .padding(.trailing, 20)
                 
-                Button(action: {}, label: {
-                    Text("Add to cart")
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.orange)
-                        .cornerRadius(10)
-                })
-            }.padding(.vertical, 10).padding(.horizontal, 20)
-        }
-        .onAppear() {
-            if image == nil {
-                loadArticleImage()
+                HStack {
+                    Spacer()
+                    Text(String(format: "%.2f", article.price) + "€")
+                        .fontWeight(.bold)
+                        .padding(.trailing, 20)
+                    
+                    Button(action: {}, label: {
+                        Text("Ajouter au panier")
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.orange)
+                            .cornerRadius(10)
+                    })
+                }.padding(.vertical, 10).padding(.horizontal, 20)
+            }
+            
+            .onAppear() {
+                if image == nil {
+                    loadArticleImage()
+                }
             }
         }
     }
