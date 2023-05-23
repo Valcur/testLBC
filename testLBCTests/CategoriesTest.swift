@@ -10,7 +10,7 @@ import XCTest
 
 final class CategoriesTest: XCTestCase {
     
-    var categories: Categories = Categories()
+    var categories: CategoriesManager = CategoriesManager()
     
     override func setUpWithError() throws {
         let testBundle = Bundle(for: type(of: self))
@@ -18,7 +18,7 @@ final class CategoriesTest: XCTestCase {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 if let jsonResult = try? JSONDecoder().decode([ArticleCategory].self, from: data) {
-                    self.categories = Categories(jsonResult)
+                    self.categories = CategoriesManager(jsonResult)
                 } else {
                     print("Error initalizing Categories from JSON")
                 }
@@ -28,7 +28,7 @@ final class CategoriesTest: XCTestCase {
         }
     }
     
-    func testExample() throws {
+    func testCategoriesManager() throws {
         XCTAssert(categories.categories.count == 11)
         for i in 1...11 {
             XCTAssert(categories.categoryNameforId(Int64(i)) != "Id Error")

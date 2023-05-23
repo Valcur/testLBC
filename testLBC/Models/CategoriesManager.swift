@@ -1,5 +1,5 @@
 //
-//  CategoriesManages.swift
+//  CategoriesManager.swift
 //  testLBC
 //
 //  Created by Loic D on 22/05/2023.

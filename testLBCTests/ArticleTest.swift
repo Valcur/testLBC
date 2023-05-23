@@ -11,7 +11,7 @@ import XCTest
 final class ArticleTest: XCTestCase {
     
     var articles: [Article] = []
-
+    
     override func setUpWithError() throws {
         let testBundle = Bundle(for: type(of: self))
         if let path = testBundle.path(forResource: "TestArticles", ofType: "json") {
@@ -27,14 +27,9 @@ final class ArticleTest: XCTestCase {
             }
         }
     }
-
-
-    func testExample() throws {
+    
+    
+    func testArticlesJSON() throws {
         XCTAssert(articles[0].id == 1461267313)
     }
-
-    func testPerformanceExample() throws {
-
-    }
-
 }

@@ -9,23 +9,23 @@ import Foundation
 
 class ArticleViewModel: ObservableObject {
     @Published var categoriesManager: CategoriesManager = CategoriesManager([])
-    @Published private var articles: [Article] = [] 
+    @Published private var articles: [Article] = []
     @Published var filteredArticles: [Article] = []
     @Published var filterSelectedId: Int64 = 0
     
     init() {
-        ArticleViewModel.fetchArticles { (art, error) in
-            if (error == nil) {
+        ArticleViewModel.fetchArticles { (art) in
+            if let art = art {
                 DispatchQueue.main.async {
-                    self.iniArticles(withArticles: art ?? [])
+                    self.iniArticles(withArticles: art)
                 }
             }
         }
         
-        ArticleViewModel.fetchCategories { (cat, error) in
-            if (error == nil) {
+        ArticleViewModel.fetchCategories { (cat) in
+            if let cat = cat {
                 DispatchQueue.main.async {
-                    self.categoriesManager = CategoriesManager(cat ?? [])
+                    self.categoriesManager = CategoriesManager(cat)
                 }
             }
         }

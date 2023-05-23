@@ -52,7 +52,7 @@ struct ArticleView: View {
                         }
                     }.padding(.horizontal, 15)
                 }
-            }.frame(height: 80).cornerRadius(15).padding(.horizontal, 10)
+            }.frame(height: 80).cornerRadius(15).padding(.horizontal, 10).padding(.bottom, 5)
         }
     }
 }
